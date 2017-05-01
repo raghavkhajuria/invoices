@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Standard Meta -->
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- Site Properties -->
+    <title>Homepage - Semantic</title>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
+
+    <style type="text/css">
+        body > .grid {
+            height: 100%;
+        }
+    </style>
+
+    <script>
+        $(document)
+                .ready(function () {
+                    $('.ui.menu .ui.dropdown').dropdown({
+                        on: 'hover'
+                    });
+                    $('.ui.menu a.item')
+                            .on('click', function () {
+                                $(this)
+                                        .addClass('active')
+                                        .siblings()
+                                        .removeClass('active')
+                                ;
+                            })
+                    ;
+                    $('.ui.dropdown')
+                            .dropdown();
+                })
+        ;
+    </script>
+</head>
+
+<body>
+<div class="pusher">
+    <div id="navbar" class="ui top fixed menu">
+        <div class="center aligned item" style="padding-right: 112px; padding-left: 60px">
+            <img class="ui tiny image" src="images/drip-capital-logo.png">
+        </div>
+        <div class="item"><h1 class="ui header">Blue Park private limited</h1>
+        </div>
+        <div class="right item">
+            <a href="Application.html">
+
+                <div class="ui primary button">
+                    Submit New Invoice
+                </div>
+            </a>
+        </div>
+        <div class="item">
+            <div class="ui primary button">Request New Buyer</div>
+        </div>
+        <div class="item">
+            <div class="ui basic button">Contact Us</div>
+        </div>
+        <div class="item">
+            <div class="ui basic button">Log-out</div>
+        </div>
+    </div>
+
+    <div class="ui hidden divider"></div>
+    <div class="ui hidden divider"></div>
+    <div class="ui hidden divider"></div>
+    <div class="ui hidden divider"></div>
+
+    <div class="ui container">
+        <div class="ui grid">
+            <div class="two wide column">
+                <div class="ui left fixed vertical menu large" style="margin-top: 62px">
+                    <a class="item">
+                        <b>Overview</b>
+                    </a>
+                    <div class="item">
+                        <div class="ui teal label">5</div>
+                        <b>Invoices</b>
+                        <div class="menu">
+                            <a class="item">Submitted</a>
+                            <a class="active item">Draft</a>
+                            <a class="item">Active</a>
+                            <a class="item">Over Due</a>
+                            <a class="item">All</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ui teal label">3</div>
+                        <b>Buyers</b>
+                        <div class="menu">
+                            <a class="item">All Buyers</a>
+                            <a class="item">Submitted</a>
+                            <a class="item">Draft</a>
+                            <a class="item">Rejected</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fourteen wide column" style="padding-top: 60px">
+                <div class="ui middle aligned center aligned grid">
+                    <h2 class="ui center aligned icon header">
+                        <i class="circular inverted teal users icon"></i>
+                        Submitting new invoice: Step 1 of 3
+                    </h2>
+                </div>
+                <div class="required field">
+                    <div class="ui fluid selection dropdown" style="margin-top: 40px; margin-bottom: 20px">
+                        <input type="hidden" name="user">
+                        <i class="dropdown icon"></i>
+                        <div class="default text">Select Buyer</div>
+                        <div class="menu">
+                            <div class="item" data-value="jenny">
+                                Jenny Hess Pvt Ltd
+                            </div>
+                            <div class="item" data-value="elliot">
+                                Another Company Pvt Ltd
+                            </div>
+                            <div class="item" data-value="stevie">
+                                Yet Another Pvt Ltd
+                            </div>
+                            <div class="item" data-value="christian">
+                                Christian tired Pvt Ltd
+                            </div>
+                            <div class="item" data-value="matt">
+                                Matt blah Pvt Ltd
+                            </div>
+                            <div class="item" data-value="justen">
+                                Justen qwerty Pvt Ltd
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui grid">
+                    <div class="eight wide column right aligned">
+                        <a href="master.html">
+                        <div class="ui basic button"><i class="left arrow icon"></i>Back</div></a>
+                    </div>
+                    <div class="eight wide column left aligned">
+                        <a href="Application1.html">
+                            <div class="ui right primary button">Next<i class="right arrow icon"></i></div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="ui hidden divider"></div>
+                <div class="ui hidden divider"></div>
+                <div class="ui hidden divider"></div>
+                <div class="ui hidden divider"></div>
+                <div class="ui hidden divider"></div>
+                <h4 class="ui horizontal divider header">
+  <i class="bar chart icon"></i>
+  Available Buyer Limits Below
+</h4>
+                <table class="ui very basic table">
+                    <thead>
+                    <tr>
+                        <th>Buyer ID</th>
+                        <th>Buyer</th>
+                        <th>Value</th>
+                        <th>Invoice Date</th>
+                        <th>Submission Date</th>
+                        <th>Status</th>
+                        <th>Comment</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>John</td>
+                        <td>$100,000</td>
+                        <td>12/12/12</td>
+                        <td>12/12/12</td>
+                        <td>Pending</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Vibhaj</td>
+                        <td>$120,000</td>
+                        <td>12/12/12</td>
+                        <td>12/12/12</td>
+                        <td>Pending</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Jack</td>
+                        <td>$130,000</td>
+                        <td>12/12/12</td>
+                        <td>12/12/12</td>
+                        <td>Approved</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Jill</td>
+                        <td>$140,000</td>
+                        <td>12/12/12</td>
+                        <td>12/12/12</td>
+                        <td>Rejected</td>
+                        <td>Unknow</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+</body>
+
+</html>
